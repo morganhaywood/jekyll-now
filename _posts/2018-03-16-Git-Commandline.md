@@ -7,7 +7,7 @@ In the last few days I've a few questions about how to use git from the commandl
 
 Note: I'm assuming that you already understand how git works (at least at a high level); if you're not comfortable with that then I recommend reading [this overview](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) or a similar one first.
 
-Also note: All git commands **must** be run from you repo's directory. I'll say this expcitly for the setup ones, but if it starts with `git` then assume you'll need to have your console open to your repo. Use `pwd` if you need to check where you are.
+Also note: All git commands **must** be run from you repo's directory unless otherwise stated. I'll say this expcitly for the setup ones, but if it starts with `git` then assume you'll need to have your console open to your repo (again, unless I specifically say otherwise). Use `pwd` if you need to check where you are.
 
 Also note: I'm assuming throughout this that your remote is called _origin_. If you've named it anything else, or you want to name it anything else, then you should replace the word _orgin_ with your preferred name in all of the following commands.
 
@@ -48,4 +48,82 @@ When you create a repo (whether local or remote) it will come with a _master_ br
 
 #### Cloning a remote repo
 
-Instead of creating a local repo, you can instead clone an existing remote. This is probably the easier option, and the one which you'll use more often if you're working with other people's code. Run `git clone <URL>` to clone the remote found at that URL (again it could be HTTPS or SSH). 
+Instead of creating a local repo, you can instead clone an existing remote. This is probably the easier option, and the one which you'll use more often if you're working with other people's code. Run `git clone <URL>` to clone the remote found at that URL (again it could be HTTPS or SSH). This does **not** need to be run from your repo's directory; it will create a new directory with the same name as the remote repo inside the current directory. If you want it to be called something else, then use `git clone <URL> <directory-name>` instead; this will create a new directory called _directory-name_ and clone into there.
+
+---
+
+## Commiting
+
+Once you have your repo set up, even if you do nothing else in git you **must** make commits. Otherwise there's really no point setting it up in the first place!
+
+#### Seeing what's changed
+
+`git status` will show you what's changed. It will split any changes into three categories: staged files, unstaged files, and untracked files. Staged files will be included in your next commit. Unstaged files have previously been commited, but any changes you have made since will **not** be included in your commit. Untracked files have never been included in a commit.  
+In general you can commit with unstaged or untracked changes, but can't do much else.
+
+#### Staging files
+
+`git add <file-name>` will add said file to staging. It will then be included in your next commit.  
+`git add .` will add **everything** to staging, including untracked files.
+
+#### Commiting
+
+`git commit -m "<message>"` will commit your staged files with the given commit message.  
+This message should generally be short and to the point, but descriptive enough that your team can unstand what your changes do. It should also generally start with a verb in the imperative form (e.g "Create index file", "Fix typos in readme").
+
+
+---
+
+## Pushing and pulling
+
+#### Push to remote
+
+`git push` will push all your changes to the remote.
+
+#### Pulling from the remote
+
+`git fetch` will download any changes from the remote. `git pull` will both fetch and integrate the changes. In general I use the latter, unless I know I just want to view changes in the remote (e.g. which branches have been created).
+
+---
+
+## Dealing with mistakes
+
+Check out the man page for `git reset` (`man git-reset`) for more options, but what follows are some of the most useful commands.
+
+#### Removing files from staging
+
+If you accidentally add the wrong file to staging  (e.g. not checking what's changed before running `git add .`) you can use `git reset HEAD --<file-name>` to remove it. This will keep any changes you made to file, it just won't be staged anymore.
+
+#### Reverting changes to a file
+
+If you want to remove changes you've made to a file (but not commited yet) you can use `git checkout --<file-name>`.
+
+#### Reverting a branch to remote
+
+If you made commits you didn't want to, use `git reset origin/<branch-name>` to reset the _branch_ to what's on origin. This will keep any changes you've made, but they won't be commited any more. `git reset --hard origin/<brnach-name>` will discard any changes you've made.
+
+---
+
+## Ignoring files
+
+Sometimes you need to have certain files in you repo, but you don't necessarily want to push them to the main repo. In this case we can tell git to ignore them (so you can use `git add .` without worrying about them). A quick search for "gitignore" will give you a lot of suggestions for what falls in to this category, but for starters if you're using IntelliJ I suggest the _.idea_ folder.  
+The list of files to ignore are stored in a file called _.gitingore_. You'll need to create and edit this manually. File names (or paths) should be added one per line, and * can be used as a wildcare. e.g.
+```
+.idea/
+mytestdata.zip
+*.txt
+```
+will ignore the .idea folder, the file _mytestdata.zip_, and all text files.  
+If you want to do it from the commandline, I suggest:
+```
+touch .gitingore
+vim .gitignore
+```
+See [this](https://morganhaywood.github.io/Vim-Crash-Course/) post if you're unfamiliar with vim.
+
+---
+
+## Branching
+
+#### Viewing branches
+
