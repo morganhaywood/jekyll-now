@@ -56,7 +56,7 @@ Instead of creating a local repo, you can instead clone an existing remote. This
 
 Once you have your repo set up, even if you do nothing else in git you **must** make commits. Otherwise there's really no point setting it up in the first place!
 
-#### Seeing what's changed
+#### Seeing what you've changed
 
 `git status` will show you what's changed. It will split any changes into three categories: staged files, unstaged files, and untracked files. Staged files will be included in your next commit. Unstaged files have previously been commited, but any changes you have made since will **not** be included in your commit. Untracked files have never been included in a commit.  
 In general you can commit with unstaged or untracked changes, but can't do much else.
@@ -71,6 +71,12 @@ In general you can commit with unstaged or untracked changes, but can't do much 
 `git commit -m "<message>"` will commit your staged files with the given commit message.  
 This message should generally be short and to the point, but descriptive enough that your team can unstand what your changes do. It should also generally start with a verb in the imperative form (e.g "Create index file", "Fix typos in readme").
 
+---
+
+## Looking at the history
+
+`git log` will show you a list of commits for the current branch. Note that depending on how many there are, this may act like a read-only vim editor. You should be able to scroll normally, and press `q` and enter to quit (see [this](https://morganhaywood.github.io/Vim-Crash-Course/) for more info on vim).  
+Each commit in the log should have a SHA listed. To see more information about a specific commit, run `git show <SHA>`.
 
 ---
 
@@ -113,7 +119,7 @@ The list of files to ignore are stored in a file called _.gitingore_. You'll nee
 mytestdata.zip
 *.txt
 ```
-will ignore the .idea folder, the file _mytestdata.zip_, and all text files.  
+will ignore the _.idea folder_, the file _mytestdata.zip_, and all text files.  
 If you want to do it from the commandline, I suggest:
 ```
 touch .gitingore
@@ -127,3 +133,41 @@ See [this](https://morganhaywood.github.io/Vim-Crash-Course/) post if you're unf
 
 #### Viewing branches
 
+`git branch` will show you all of your local branches. `git branch -r` will show you all the branches on your remote, and `git branch -a` will show you all branches (both local and remote).
+
+#### Creating a branch
+
+`git checkout -b <branch-name>` will create a new branch locally and switch you to it. Alternatively, `git branch <branch-name>` will only create it, not change your working branch as well. Finally, `git push origin <branch-name>` will create a new branch on origin.
+
+#### Getting a branch from remote
+
+If a branch already exists on origin, you can use `git branch <branch-name> origin/<branch-name>` to create a local branch which will track the remote branch.
+
+#### Switching branches
+
+`git checkout <branch-name>` to change your working branch (similar to creating one above, but note the lack of the `-b` option, which is the flag to create a new branch).
+
+#### Deleting a branch
+
+`git branch -d <branch-name>` will delete a branch locally. Make sure you've merged your changes before doing this! I find that it's generally easier to ddelete branches on the remote through the GUI (e.g. if you're using github) since you'll probably handle pull requests that way anyway (and it's part of the same screen), but if you **really** want to, you can use `git push origin --delete <branch-name>`.
+
+---
+
+## Combining branches
+
+#### Merging
+
+`git merge <branch-name>` will merge the given branch into your current one.  
+The way I remember which way around this goes is that you only make changes to your **current** branch. Merging branch A into branch B effectively adds commits to B, so you have to be on B.  
+If you have any conlficts then you'll get a failure messge. Open the files listed in your editor, and resolve these. Then add your resolutions to staging by using `git add <file>` or `git add .`. Finally, finish the marge by running `git commit`. This may dump you into vim; if you're unfamilar you can hit `:wq` and enter to use the default message, or see [this](https://morganhaywood.github.io/Vim-Crash-Course/) blog post for a crash-course.
+
+#### Squash and merge
+
+Use `git merge --squash <branch-name>` to squash and merge the given branch into your current one. The main difference between this and a normal merge is that you'll need to run `git commit` to commit the squashed commit and finish the merge (again, this will dump you into vim; see above). If you have conflicts, then the workflow is the same as for a normal merge.
+
+#### Rebase
+
+Note that this is a contenious move, since it changes the git history. People have **very** strong feelings about this. In general, don't rebase unless your team has okayed it first (if you're working on a personal repo, do whatever you want).  
+`git rebase <new-base-branch>` will rebase your current branch **onto** the given one (you're moving A to the latest commit on B, so A is what's changing). `git rebase <new-base-branch> <branch-name>` will rebase _branch-name_ onto _new-base-branch_.  
+If you have conflicts then you will need to resolve them and stage your resolutions (`git add <file>`/`git add .`). Then use `git rebase --continue` to coninute rebasing. Expect several rounds of conflicts (possibly in the same places), since the commits are added one at a time.  
+Finally, after a rebase you will need to use `git push --force` in order to force a push to the remote. This is because you are overwriting the exisiting history.
