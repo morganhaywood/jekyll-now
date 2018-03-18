@@ -82,7 +82,7 @@ Each commit in the log should have a SHA listed. To see more information about a
 
 #### Push to remote
 
-`git push` will push all your changes to the remote.
+`git push` will push all your changes to the remote. If you're using HTTPS, you might be asked for a password. If you are having touble with this, I recommend switching to SSH (I find it a lot more reliable).
 
 #### Pulling from the remote
 
