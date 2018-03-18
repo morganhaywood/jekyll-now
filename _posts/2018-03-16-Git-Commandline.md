@@ -92,6 +92,13 @@ Each commit in the log should have a SHA listed. To see more information about a
 
 ---
 
+## Stashing
+
+Sometimes changes get in the way of doing things in git. If you don't want to commit them, but do want to pull, switch branches, etc, you can stash them instead. This adds your unfinished changes to a stack, which you can then reapply whenever you want.
+`git stash` will add your current uncommited changes to you stash. `git stash list` and `git stash show` will show you what's currently in your stash (in slightly different formats). Finally, `git stash apply` will apply the top of the stash to your current working branch.
+
+---
+
 ## Dealing with mistakes
 
 Check out the man page for `git reset` (`man git-reset`) for more options, but what follows are some of the most useful commands.
@@ -160,14 +167,20 @@ If a branch already exists on origin, you can use `git branch <branch-name> orig
 `git merge <branch-name>` will merge the given branch into your current one.  
 The way I remember which way around this goes is that you only make changes to your **current** branch. Merging branch A into branch B effectively adds commits to B, so you have to be on B.  
 If you have any conlficts then you'll get a failure messge. Open the files listed in your editor, and resolve these. Then add your resolutions to staging by using `git add <file>` or `git add .`. Finally, finish the marge by running `git commit`. This may dump you into vim; if you're unfamilar you can hit `:wq` and enter to use the default message, or see [this](https://morganhaywood.github.io/Vim-Crash-Course/) blog post for a crash-course.
+If you can't resolve the conflicts, or you have a sudden change or heart, you can use `git merge --abort` to abort mission (so long as you haven't commited yet).
 
 #### Squash and merge
 
-Use `git merge --squash <branch-name>` to squash and merge the given branch into your current one. The main difference between this and a normal merge is that you'll need to run `git commit` to commit the squashed commit and finish the merge (again, this will dump you into vim; see above). If you have conflicts, then the workflow is the same as for a normal merge.
+Use `git merge --squash <branch-name>` to squash and merge the given branch into your current one. The main difference between this and a normal merge is that you'll need to run `git commit` to commit the squashed commit and finish the merge (again, this will dump you into vim; see above). If you have conflicts, then the workflow is the same as for a normal merge. Likewise, aborting works the same.
 
 #### Rebase
 
 Note that this is a contenious move, since it changes the git history. People have **very** strong feelings about this. In general, don't rebase unless your team has okayed it first (if you're working on a personal repo, do whatever you want).  
 `git rebase <new-base-branch>` will rebase your current branch **onto** the given one (you're moving A to the latest commit on B, so A is what's changing). `git rebase <new-base-branch> <branch-name>` will rebase _branch-name_ onto _new-base-branch_.  
 If you have conflicts then you will need to resolve them and stage your resolutions (`git add <file>`/`git add .`). Then use `git rebase --continue` to coninute rebasing. Expect several rounds of conflicts (possibly in the same places), since the commits are added one at a time.  
+If you can't resolve the conflicts, or something goes wrong, you can use `git rebase --abort` to abort mission.
 Finally, after a rebase you will need to use `git push --force` in order to force a push to the remote. This is because you are overwriting the exisiting history.
+
+---
+
+I hope that helps get you started with using git from the command line!
