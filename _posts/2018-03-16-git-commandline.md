@@ -15,7 +15,7 @@ Also also note: I'm assuming throughout this that your remote is called _origin_
 
 ---
 
-## Setting up your repo
+## Setting up Your Repo
 
 The first thing you'll need to do is to set up your repo. There's two methods for doing this: creating your local repo first, or from an existing remote.
 
@@ -73,14 +73,14 @@ This message should generally be short and to the point, but descriptive enough 
 
 ---
 
-## Looking at the history
+## Looking at the History
 
 `git log` will show you a list of commits for the current branch. Note that depending on how many there are, this may act like a read-only vim editor. You should be able to scroll normally, and press `q` and enter to quit (see [this]({{site.url}}{% post_url 2018-02-19-vim-crash-course %}) for more info on vim).  
 Each commit in the log should have a SHA listed. To see more information about a specific commit, run `git show <SHA>`.
 
 ---
 
-## Pushing and pulling
+## Pushing and Pulling
 
 #### Push to remote
 
@@ -102,7 +102,7 @@ Finally, `git stash apply` will apply the top of the stash to your current worki
 
 ---
 
-## Dealing with mistakes
+## Dealing with Mistakes
 
 Check out the man page for `git reset` (`man git-reset`) for more options, but what follows are some of the most useful commands.
 
@@ -120,7 +120,7 @@ If you made commits you didn't want to, use `git reset origin/<branch-name>` to 
 
 ---
 
-## Ignoring files
+## Ignoring Files
 
 Sometimes you need to have certain files in you repo, but you don't necessarily want to push them to the main repo. In this case we can tell git to ignore them (so you can use `git add .` without worrying about them). A quick search for "gitignore" will give you a lot of suggestions for what falls in to this category, but for starters if you're using IntelliJ I suggest the _.idea_ folder.  
 The list of files to ignore are stored in a file called _.gitignore_. You'll need to create and edit this manually. File names (or paths) should be added one per line, and * can be used as a wildcard. e.g.
@@ -163,7 +163,7 @@ If a branch already exists on origin, you can use `git branch <branch-name> orig
 
 ---
 
-## Combining branches
+## Combining Branches
 
 #### Merging
 
