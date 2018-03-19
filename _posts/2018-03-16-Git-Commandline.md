@@ -5,6 +5,8 @@ title: Git from the Command line
 
 In the last few days I've a few questions about how to use git from the command line. Give that, and since I spent some time making myself a quick (but very messy and handwritten) cheat sheet for a whole bunch of commands, I thought it might be worthwhile writing that cheatsheet up a little more neatly, and with a little more explanation. Hence this post.
 
+You can find a cheat sheet for all the commands covered in this post [here](http://morganhaywood.github.oi/post-assets/git-commandline/git-cheat-sheet.pdf).
+
 Note: I'm assuming that you already understand how git works (at least at a high level); if you're not comfortable with that then I recommend reading [this overview](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics) or a similar one first.
 
 Also note: All git commands **must** be run from you repo's directory unless otherwise stated. I'll say this explicitly for the setup ones, but if it starts with `git` then assume you'll need to have your console open to your repo (again, unless I specifically say otherwise). Use `pwd` if you need to check where you are.
