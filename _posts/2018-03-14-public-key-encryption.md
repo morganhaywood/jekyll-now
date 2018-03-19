@@ -65,7 +65,7 @@ Finally, a lot of cryptography relies upon generating random numbers (and thus r
 
 #### My Extended Essay
 
-Can be found [here](https://morganhaywood.github.io/files/Extended_Essay-quantum_cryptogaphy_and_public-key_encryption.pdf), and contains its own bibliography (which is probably more useful than either the essay itself or this reference list for anyone looking for further reading).
+Can be found [here]({{site.url}}/post-assets/Extended_Essay-quantum_cryptogaphy_and_public-key_encryption.pdf), and contains its own bibliography (which is probably more useful than either the essay itself or this reference list for anyone looking for further reading).
 
 #### Other references
 
