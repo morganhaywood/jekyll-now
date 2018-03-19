@@ -84,7 +84,8 @@ Each commit in the log should have a SHA listed. To see more information about a
 
 #### Push to remote
 
-`git push` will push all your changes to the remote. If you're using HTTPS, you might be asked for a password. If you are having touble with this, I recommend switching to SSH (I find it a lot more reliable).
+`git push` will push all your changes to the remote. If there are changes on the remote which you don't have, then you must pull them first (you'll get an error message to this effect).  
+If you're using HTTPS, you might be asked for a password. If you are having touble with this, I recommend switching to SSH (I find it a lot more reliable).
 
 #### Pulling from the remote
 
@@ -95,8 +96,9 @@ Each commit in the log should have a SHA listed. To see more information about a
 ## Stashing
 
 Sometimes changes get in the way of doing things in git. If you don't want to commit them, but do want to pull, switch branches, etc, you can stash them instead. This adds your unfinished changes to a stack, which you can then reapply whenever you want.  
+`git stash` will add your current uncommitted changes to you stash. `git stash list` and `git stash show` will show you what's currently in your stash (the former all items and the latter a more detailed view of the top). See below for sample output.  
 ![stash list vs show](https://morganhaywood.github.io/post-assets/git-commandline/stash-list-and-show.png)  
-`git stash` will add your current uncommitted changes to you stash. `git stash list` and `git stash show` will show you what's currently in your stash (the former all items and the latter a more detailed view of the top). Finally, `git stash apply` will apply the top of the stash to your current working branch.
+Finally, `git stash apply` will apply the top of the stash to your current working branch.
 
 ---
 
@@ -167,9 +169,11 @@ If a branch already exists on origin, you can use `git branch <branch-name> orig
 
 `git merge <branch-name>` will merge the given branch into your current one.  
 The way I remember which way around this goes is that you only make changes to your **current** branch. Merging branch A into branch B effectively adds commits to B, so you have to be on B.  
-If you have any conflicts then you'll get a failure message. Open the files listed in your editor, and resolve these. Then add your resolutions to staging by using `git add <file>` or `git add .`. Finally, finish the marge by running `git commit`. This may dump you into vim; if you're unfamiliar you can hit `:wq` and enter to use the default message, or see [this](https://morganhaywood.github.io/Vim-Crash-Course/) blog post for a crash-course.  
+If you have any conflicts then you'll get a failure message:  
 ![merge conflict message](https://morganhaywood.github.io/post-assets/git-commandline/merge-conflict-message.png)  
+Open the files listed in your editor, and resolve the marked conflicts:  
 ![conflict in file](https://morganhaywood.github.io/post-assets/git-commandline/conflict.png)  
+Then add your resolutions to staging by using `git add <file>` or `git add .`. Finally, finish the marge by running `git commit`. This may dump you into vim; if you're unfamiliar you can hit `:wq` and enter to use the default message, or see [this](https://morganhaywood.github.io/Vim-Crash-Course/) blog post for a crash-course.  
 If you can't resolve the conflicts, or you have a sudden change or heart, you can use `git merge --abort` to abort mission (so long as you haven't committed yet).
 
 #### Squash and merge
