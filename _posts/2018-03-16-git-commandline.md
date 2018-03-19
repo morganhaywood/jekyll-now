@@ -21,7 +21,7 @@ The first thing you'll need to do is to set up your repo. There's two methods fo
 
 #### Creating a local repo
 
-On your computer, create a directory (folder) where your repo will be stored, and navigate to it in your console. Then run the command `git init` to turn that directory in to a folder. This might look like:  
+On your computer, create a directory (folder) where your repo will be stored, and navigate to it in your console. Then run the command `git init` to turn that directory in to a git repository. This might look like:  
 ```
 cd Documents
 mkdir myRepo
