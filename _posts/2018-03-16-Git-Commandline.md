@@ -75,7 +75,7 @@ This message should generally be short and to the point, but descriptive enough 
 
 ## Looking at the history
 
-`git log` will show you a list of commits for the current branch. Note that depending on how many there are, this may act like a read-only vim editor. You should be able to scroll normally, and press `q` and enter to quit (see [this](https://morganhaywood.github.io/Vim-Crash-Course/) for more info on vim).  
+`git log` will show you a list of commits for the current branch. Note that depending on how many there are, this may act like a read-only vim editor. You should be able to scroll normally, and press `q` and enter to quit (see [this]({{site.url}}{% post_url 2018-02-19-Vim-Crash-Course %) for more info on vim).  
 Each commit in the log should have a SHA listed. To see more information about a specific commit, run `git show <SHA>`.
 
 ---
@@ -135,7 +135,7 @@ If you want to do it from the command line, I suggest:
 touch .gitignore
 vim .gitignore
 ```
-(or just `vim .gitignore` to create and edit it in one step). See [this](https://morganhaywood.github.io/Vim-Crash-Course/) post if you're unfamiliar with vim.
+(or just `vim .gitignore` to create and edit it in one step). See [this]({{site.url}}{% post_url 2018-02-19-Vim-Crash-Course %) post if you're unfamiliar with vim.
 
 ---
 
@@ -173,7 +173,7 @@ If you have any conflicts then you'll get a failure message:
 ![merge conflict message]({{site.url}}/post-assets/git-commandline/merge-conflict-message.png)  
 Open the files listed in your editor, and resolve the marked conflicts:  
 ![conflict in file]({{site.url}}/post-assets/git-commandline/conflict.png)  
-Then add your resolutions to staging by using `git add <file>` or `git add .`. Finally, finish the marge by running `git commit`. This may dump you into vim; if you're unfamiliar you can hit `:wq` and enter to use the default message, or see [this](https://morganhaywood.github.io/Vim-Crash-Course/) blog post for a crash-course.  
+Then add your resolutions to staging by using `git add <file>` or `git add .`. Finally, finish the marge by running `git commit`. This may dump you into vim; if you're unfamiliar you can hit `:wq` and enter to use the default message, or see [this]({{site.url}}{% post_url 2018-02-19-Vim-Crash-Course %) blog post for a crash-course.  
 If you can't resolve the conflicts, or you have a sudden change or heart, you can use `git merge --abort` to abort mission (so long as you haven't committed yet).
 
 #### Squash and merge
