@@ -15,20 +15,19 @@ An operating system is a thin layer of abstraction on top of the hardware. The k
 
 #### The kernel
 
-The kernel is responsible for memory management, driving the hardware, and program execution. Programs do not acutally run concurrently; the kernel must handle process execution and resource management such that it appears to the user that everything is happening simultaneously.  
-The kernel generally has a constant stream of work to do; new requests will therefore get scheduled for execition. The hardware (e.g. keypresses) is required to be highly responsive, so it cirumvents the kernel's schedulling by sending inturrupts. When it receives such an inturrupt, the kernel will stop what it is doing, handle the inturrupt, and then continue with what it was doing. 
+The kernel is responsible for memory management, driving the hardware, program execution, security, etc. Programs do not acutally run concurrently; the kernel must handle process execution and resource management such that it appears to the user that everything is happening simultaneously.  
+The kernel generally has a constant stream of work to do; new requests will therefore get scheduled for execition. The hardware (e.g. keypresses) is required to be highly responsive, so it cirumvents the kernel's schedulling by sending inturrupts. When it receives such an inturrupt, the kernel will stop what it is doing, handle the inturrupt, and then continue with what it was doing.  
+The kernel may report incorrect information about the state of the system. For example, althought the kernel may **say** that it has allocated memory, it will not acutally do this until that memory is used by the program. While this can cause some odd behaviour and errors, in general it improves performance (e.g. a rogue program cannot take up all the avaliable memory simply by continously asking for it to be allocated).
 
-#### Userland
+#### System calls
 
-
+System calls are what userlands uses to communicate with the kernel; they are the application binary interface (ABI). Some examples are: clone, exec, chdir, open, create, connect, accept, read, write, unlink, rename, select, and kill.  
+The shell is a userinterface to the kernel, which uses these sys calls (although it generally comes with built-ins which make use of them). It is just another program, which runs in userland. It is not really a language.
 
 #### Standard practices
 
-
-
-#### Shell scripting
-
-
+When working with the shell, you should write programs which do only one thing, and do it well. You should use throwaway prototypes as necessary.  
+You should write programs which work together. That is, any programs you write should expect to take input from, and give output to, an as-yet unknown program. This means avoiding unnecessary output (e.g. headers), and not expecting interactive input. It should accept input from stdin and write output to stdout, and write diagnostic output to stderr. Additionally, it should use text streams for this, since these function as a universal interface. 
 
 ---
 
