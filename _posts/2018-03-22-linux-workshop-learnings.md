@@ -36,6 +36,35 @@ Variables are reffered to as parameters. Environement parameters are always use 
 
 ## Useful Commands
 
+`2>/dev/null` redirects stderr to dev/null  
+`2>&1` redirects stderr to stdout  
+`sort | uniq` or `sort -u` will pull out unique lines  
+`tr` is the transform untility  
+localhost is 127.0.0.1  
+`nc` is netcat: arbitrary TCP and UDP connections. It writes to stderr by default. `-zv` will scan ports. `-l` will listen on a port (e.g. to serve files or run as a chat server).  
+`openssl s_client -connect <host>:<port>` will connect via ssl to a host. Use `-ign-eof` for non-interactive mode.  
+`ssh -p <port> -i <id file>` (e.g. public key) to ssh to a remote  
+`grep <options> <file>` to parse a file. `-f` will get the patterns from a file. `-v` will in_v_ert the match (i.e. return unmatched lines).  
+`nmap -p <port range> <host>` scans ports. `-Pn` will scan without sending a ping first. `-p-` will scan all ports. It may need to be installed, depending on the system.  
+`&` at the end of a line will send the process to the background. `jobs` will show all running processes. `fg` will bring the last used process to the foreground (indicated by a `+` in the jobs list). `fg %<number>` will bring the process with the given number to the foreground.  
+`set -e` will exit a script immediately if a simple command returns with a non-zero status.  
+`set -x` will show what commands are running and their output (esp. useful in a script). `set +x` will turn this off again.  
+`sheelcheck` is a non-standard utility for checking scripts (e.g. for syntax errors) with helpful suggested fixes included. `-x` will follow external sources. `$0` will check the running script (the running command is always parameter zero).  
+`trap <command> <signal>` will run a command when a signal is received (e.g. cleanup on exit).
+`command -v <command> >/dev/null` can be used to check if a command exists (although care if running it without arguments will do something).  
+`jq <flags> "<commands>"` is god if working with JSON. Useful commands are: `setpath(<key>;<value>)` to add value at key; `@csv` to convert a values-only structure to a csv; `|` to chain commands; `-M` for monochrome output; `-c` for consise output (one line per object); `keys` and `keys_unsorted` to get the keys; `map()` to get only values; and `<field> = <value>` to update values.  
+`cat` consumes input! You'll need to store input in a variable if you want to use the same input twice in a script.  
+`<` at the end of a command sends the RHS to the stdin of the LHS. `>` sends the stdout of the LHS to the RHS. `>>` appends the stdout of the LHS to the RHS. The RHS of all of these is typically a file.  
+`while <statement>; do ... done` is a bash while loop, and `if [<statement>]; then ... elif [<statement>]; then ... else ... if` if an if statement.  
+`mkdir -p <directory structure>` will make any intermediary directories necessary in the given structure.  
+`ls -a` shows **all** (including hidden directories. `-A` shows all except `.` and `..`. `-l` displays the output in a list format (with some extra information). `-lh` is list but with human-readable sizes. `list -hal` is common catch-all.  
+`which` shows the alias or location.  
+`file <file>` describes the file contents.  
+`/dev/null` is a sink for output; it deletes everything it gets given.  
+`/dev/random` gives random output. `/dev/urandom` also gives random output (but will not block if it runs out of randomness, and is typically preferred).  
+`^r` will backsearch your previous commands.  
+`^u` will clear the current line.  
+`yes` just gives you a constant stream of "yes".  
 
 ---
 
