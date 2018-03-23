@@ -36,6 +36,8 @@ Variables are reffered to as parameters. Environement parameters are always use 
 
 ## Useful Commands
 
+The following is a list of commands I have come accross generally, and also by doing the Over The Wire Bandit game.
+
 `^c` to cancel running command.  
 `^d` to destroy running command.
 `^r` will backsearch your previous commands.  
@@ -68,6 +70,7 @@ localhost is 127.0.0.1
 `trap <command> <signal>` will run a command when a signal is received (e.g. cleanup on exit).
 `command -v <command> >/dev/null` can be used to check if a command exists (although care if running it without arguments will do something).  
 `while <statement>; do ... done` is a bash while loop, and `if [<statement>]; then ... elif [<statement>]; then ... else ... if` if an if statement.  
+
 ---
 
-[outro]
+I will hopefully make a cheat-sheet for the commands at some point (and update this this post when that happens). I learnt a lot from the workshop and Bandit, and will hoepfully get the chance to do more of the Over The Wire exercises to learn more about bash!
