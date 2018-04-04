@@ -50,9 +50,12 @@ This was a really useful and interesting workshop. I learnt a little too much to
 
 * Everyone has different pairing and coding styles. It's important to work with your partner to find a pairing workflow which works for both of you.  
 * Learning how to write _idomiatically_ in a new language is harder than learning to write in a new language.
-* 
+* During refactoring, make sure to pay attention to function size, naming, abstraction level, etc.
+* There are a **lot** of shortcuts and tricks to learn to make CLI more efficient to use.
 
 ---
 
 ## Next Week's Goals
 
+* Finish the Game of Life kata, with good design.
+* Get something useful done despite the short week.
