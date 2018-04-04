@@ -29,24 +29,28 @@ I had a good chat with my mentors, and we decided that I should do the advanced 
 
 #### Programming with Pedro in C
 
-Pedro and I 
+Pedro and I completed the fizz buzz and mastermind katas in C. It took a while to get the basics working since I was very rusty and Pedro had not used C before, but we got there in the end :sweat_smile: As mentioned above, although we got the katas working I feel like I need to look at some idiomatic C to futher improve.
 
 #### Minefield kata with Sina
 
-
+This was a relatively simple and quick exercise, although we could defintiely refactor our solution to improve upon it. Regardless, the point was more about pair programming with more people than actually solving the problem, and I feel like I got a lot out of it in that regard.
 
 #### _Clean Code_ chapters 3 and 4
 
-
+Chapter 3 covered functions. Functions should be small, doing only one thing, use only one level of abstraction, have a descriptive name, have no side effects, and have as few arguments as possible. Long switch or if/else statements should generally be replaced by polymorphism (whith the one remaining burried in a factory). It is better to have explicit outputs than output arugments, and exceptions should be used in preference to error codes. The conents of each part of a try/catch block should generally be their own method.  
+Chapter 4 covered comments. The main thrust was that comments should be avoided as much as possible, since they easily become out of date or misleading. It is generally better to write self-documenting code, and use comments only as a last resort (eg. to clarify working around code you cannot alter, TODOs, Javadocs for public APIs, warning of non-obvious consequences,  etc).
 
 #### zsh workshop
 
-
+This was a really useful and interesting workshop. I learnt a little too much to document here, but I want to update my Linux workshop post to include the new things I learnt. Since I've been using bash so far, I also need to figure out which things working in bash too, and wether I want to switch to zsh if not everything does.
 
 ---
 
 ## Takeaways
 
+* Everyone has different pairing and coding styles. It's important to work with your partner to find a pairing workflow which works for both of you.  
+* Learning how to write _idomiatically_ in a new language is harder than learning to write in a new language.
+* 
 
 ---
 
