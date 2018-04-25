@@ -7,10 +7,9 @@ title: Archive
        {% assign currentDate = post.date | date: "%Y" %}
        {% if currentDate != myDate %}
            {% unless forloop.first %}<br/>{% endunless %}
-           ##{{ currentDate }}
-           <br/>
+           ##{{ currentDate }}<br/>
            {% assign myDate = currentDate %}
        {% endif %}
-       [{{ post.date | date: "%B %-d, %Y" }} - {{ post.title }}]{{ post.url }}
+       [{{ post.date | date: "%B %-d, %Y" }} - {{ post.title }}]({{site.url}}{{ post.url }})
        {% if forloop.last %}<br/>{% endif %}
 {% endfor %}
