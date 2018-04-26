@@ -4,6 +4,14 @@ title: Archive
 permalink: /archive/
 ---
 
+Here is some text.
+
+## Heading
+
+here is some more text
+
+## Start dynamic content
+
 {% for post in site.posts %}
        {% assign currentDate = post.date | date: "%Y" %}
        {% if currentDate != myDate %}
