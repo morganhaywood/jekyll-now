@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Git from the Command line
+tags:
+  - learnings
+  - git
+  - CLI
 ---
 
 In the last few days I've a few questions about how to use git from the command line. Given that, and since I spent some time making myself a quick (but very messy and handwritten) cheat sheet for a whole bunch of commands, I thought it might be worthwhile writing that cheat sheet up a little more neatly, and with a little more explanation. Hence this post.
