@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Book&#58; _Clean Code_
+title: Book&#58; Clean Code
 tags:
   - learnings
   - books
