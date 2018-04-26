@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Books: _Apprentiship Patterns_ and _New Programmer's Survival Manual_
+title: Books Apprentiship Patterns and New Programmer's Survival Manual
 tags:
   - learnings
   - books
 ---
 
-This is a summary of two of the books I've read, and what I thought of them :innocent: It's largely pulled from my weekly reviews, and will be updated as appropriate.
+This is a summary of two of the books I've read, and what I thought of them :innocent: It is collated from my weekly reviews.
 
 ## _Apprentiship Patterns_
 
