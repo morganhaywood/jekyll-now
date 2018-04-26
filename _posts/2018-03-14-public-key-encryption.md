@@ -1,6 +1,9 @@
 ---
 layout: post
 title: A Basic Introduction to Public Key Encryption
+tags:
+  - learnings
+  - security
 ---
 
 I thought it might be worthwhile to reprise a topic which I have not looked at in a long time: encryption. This is a very simplistic overview of the topic, and by not means covers all aspects, but it will hopefully provide a good starting point for anyone interested; I have included references for anyone looking for further information. I will mainly cover public-key encryption (although by way of introduction we also take a look at symmetric-key encryption and the key distribution problem).
