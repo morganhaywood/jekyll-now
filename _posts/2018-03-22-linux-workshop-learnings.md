@@ -3,6 +3,7 @@ layout: post
 title: Linux Workshop Learnings
 tags:
   - learnings
+  - cli
 ---
 
 Two weeks ago I attended a workshop on Linux. What follows is a brief summary of what I learnt from it, mostly for my own reference. As usual this comes with the caveat that I may misremember or misinterpret details, so while I'll try to be as accurate as possible this post may contain errors.
