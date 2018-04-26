@@ -7,7 +7,6 @@ tags:
   - vim
   - books
   - javascript
-  - non-tech admin
 ---
 
 This week seemed quite short since I spent two days working from home (in order to more easily attend doctor's appointments :mask:), and I spent a lot of time working through Code School courses before the trial expired. I definitely learnt a **lot** thanks to that though.
