@@ -3,7 +3,7 @@ layout: post
 title: Vim Crash Course
 tags:
  - learnings
- - CLI
+ - cli
  - vim
 ---
 
