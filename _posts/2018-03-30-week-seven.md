@@ -1,6 +1,11 @@
 ---
 layout: post
 title: Week Seven in Review
+tags:
+  - weekly review
+  - books
+  - katas
+  - cli
 ---
 
 This week was fairly short due to Easter, plus several meetings and workshops. I still got a reasonable amount done though. I suspect next week will be similar since it will also be only four days.
