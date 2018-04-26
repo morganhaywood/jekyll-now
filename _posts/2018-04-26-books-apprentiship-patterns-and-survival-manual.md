@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Books Apprentiship Patterns and New Programmer's Survival Manual
+title: Books&#58; Apprentiship Patterns and New Programmer's Survival Manual
 tags:
   - learnings
   - books
