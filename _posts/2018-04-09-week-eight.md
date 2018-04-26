@@ -1,6 +1,10 @@
 ---
 layout: post
 title: Week Eight in Review
+tags:
+  - weekly review
+  - katas
+  - books
 ---
 
 This was another short week, but I feel like I got a lot out of it despite that. While I didn't necessarily get much tangibly _done_ this week, I feel like I learnt a lot from talking to people, having my code reviewed, etc. :yum:
