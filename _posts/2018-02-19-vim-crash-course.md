@@ -3,7 +3,8 @@ layout: post
 title: Vim Crash Course
 tags:
  - learnings
- - command line interface
+ - CLI
+ - vim
 ---
 
 This is a summary of the vim introduction given to my by the lovely Jonathan :blush: Let me make clear from the start, this is not a vim user's guide to vim. This is an oh-crap-some-command-just-dumped-me-into-vim-help! user's guide to vim. There's quite a difference. And if you're wondering, yes, that's happened to me _multiple_ times before.
