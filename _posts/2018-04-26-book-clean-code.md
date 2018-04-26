@@ -11,11 +11,11 @@ This is a collation of my thoughts on the _Clean Code_ book. It is aggregated fr
 The forward to this book discussed the 5S principles (seiri (整理), seiton (整頓), seiso (清楚), seiketsu (清潔) and shitsuke (躾)) which made a lot of sense to me as principles for writing good code (although I found the explanation in the Japanese wikipedia was better than the one in the book :joy: 
 I think Japanese concepts just make more sense in Japanese).
 
-The first chapter discussed different definitions of “clean code”. The key points I took out of this were: bad code always slows you down, and begets more bad code; you can, should and have to fight to implement good code despite deadlines; 
+Chapter 1 discussed different definitions of “clean code”. The key points I took out of this were: bad code always slows you down, and begets more bad code; you can, should and have to fight to implement good code despite deadlines; 
 clean code does one thing well; it is clear, easy to maintain and testable; we should aim to reduce duplication and use simple abstractions; work with your language, rather than forcing into something it’s not; write readable code; 
 and always leave the code base cleaner than when you found it.
 
-Chapter two discussed choosing names. The core of this was to make them as clear, intention-revealing and easy to use as possible. It also talked about avoiding encoding (including the implementation type in names), being consistent in name conventions, and giving context via classes etc in preference to prefixes. 
+Chapter 2 discussed choosing names. The core of this was to make them as clear, intention-revealing and easy to use as possible. It also talked about avoiding encoding (including the implementation type in names), being consistent in name conventions, and giving context via classes etc in preference to prefixes. 
 In short, your names should help make your code as easy to read, work with and refactor as possible.
 
 Chapter 3 covered functions. Functions should be small, doing only one thing, use only one level of abstraction, have a descriptive name, have no side effects, and have as few arguments as possible. Long switch or if/else statements should generally be replaced by polymorphism (with the one remaining buried in a factory). It is better to have explicit outputs than output arguments, and exceptions should be used in preference to error codes. The contents of each part of a try/catch block should generally be their own method.
