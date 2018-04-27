@@ -20,7 +20,7 @@ During his code review, Jon discussed with me the importance of identifying whic
 
 Jon also explained to me how package organisation and naming can help reveal your intent. For example, if a `page` is only ever exists as part of a `book`, then it should be part of (or a sub-package in) in the `book` package. This helps tell others how your classes should be used.
 
-Short, clearly named methods are also something of which I have come to learn the importance. This makes code much easier to understand, and therefore debug. Clear names also help identify where one method should be broken up; if you're naming something `createBookWithTableOfContentsAndIntrocutionAndSnazzyCoverBasedOnIntendedAudience` then it's probably trying to do too many things! Crucially, each method should do _one_ thing.
+Short, clearly named methods are also something of which I have come to learn the importance. This makes code much easier to understand, and therefore debug. Clear names also help identify where one method should be broken up; if you're naming something `createBookWithTableOfContentsAndIntroductionAndSnazzyCoverBasedOnIntendedAudience` then it's probably trying to do too many things! Crucially, each method should do _one_ thing.
 
 I have also learnt to think about layers of abstraction. Functions which deal with a high level of abstraction (e.g. `createBook`) should not also deal with lower levels of abstraction (e.g. `addNewline`). Keeping to one level of abstraction makes the code much more readable, since you do not need to switch between conceptual levels, and helps keep methods short (since lower levels of abstraction must be pushed to separate methods).
 
