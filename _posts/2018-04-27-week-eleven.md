@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week Ten in Review
+title: Week Eleven in Review
 tags:
   - weekly review
   - tdd
@@ -8,13 +8,13 @@ tags:
   - meaningful project
 ---
 
-This week has been a whirlwind of meetings :imp: As much as I don't particually enjoy that though, they have been important for planning our meaningful project. 
+This week has been a whirlwind of meetings :imp: As much as I don't particularly enjoy that though, they have been important for planning our meaningful project. 
 
 ## Goals
 
 #### Document some of my learnings better (e.g. write a topical blog post, or make a cheat sheet)
 
-I have sucessfully written topical blog posts! :star2: And I hopefully have one or two more to come next week.
+I have successfully written topical blog posts! :star2: And I hopefully have one or two more to come next week.
 
 #### Finish gathering proposals for the meaningful project and decide on one!
 
@@ -26,7 +26,7 @@ Also done! :innocent: We have gathered proposals, written them up to give to Mar
 
 #### Jon's TDD workshop
 
-Jon went through his throught process when starting to tackle a problem using TDD. This was really useful to see, since it clearly showed how you're meant to use TD in a top-down manner to drive the design of your application. He also suggested avoiding coding any actual implementation for as long as possible; interfaces and dummy implementations are much easier to throw away if you decide you want to change something. Finally, he suggested using these dummies to drive your tests, rather than IO.
+Jon went through his thought process when starting to tackle a problem using TDD. This was really useful to see, since it clearly showed how you're meant to use TD in a top-down manner to drive the design of your application. He also suggested avoiding coding any actual implementation for as long as possible; interfaces and dummy implementations are much easier to throw away if you decide you want to change something. Finally, he suggested using these dummies to drive your tests, rather than IO.
 
 #### Project planning
 
@@ -45,7 +45,7 @@ I spent some time adding an archives page to my blog, since I have started havin
 ## Takeaways
 
 * Having a lot of meetings is annoying, but sometimes necessary.
-* Lots of meatings means little time to code though :disappointed:
+* Lots of meetings means little time to code though :disappointed:
 * Projects take a lot of planning.
 * I still need to work on learning TDD.
 
@@ -55,4 +55,4 @@ I spent some time adding an archives page to my blog, since I have started havin
 
 * Document what I've learnt from doing ctfs.
 * Do enough planning that we can start working on the group project.
-* Do at least one mroe natas level.
+* Do at least one more natas level.
