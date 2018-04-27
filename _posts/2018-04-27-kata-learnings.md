@@ -4,6 +4,7 @@ title: Kata Learnings
 tags:
   - learnings
   - katas
+  - tdd
 ---
 
 During acceleration I have done many katas. In the interest of record keeping, here's a summary of what I've learnt from those exercises.
