@@ -39,7 +39,7 @@ Variables are referred to as parameters. Environment parameters are always use a
 
 ## Useful Commands
 
-The following is a list of commands I have come across generally, and also by doing the Over The Wire Bandit game. A cheatsheet fot these can be found [here]({{site.url}}/cheatsheets/cli_cheatsheet.pdf)
+The following is a list of commands I have come across generally, and also by doing the Over The Wire Bandit game. A cheatsheet fot these can be found [here]({{site.url}}/cheatsheets/cli_cheatsheet.pdf).
 
 `^c` to cancel running command.  
 `^d` to destroy running command.
