@@ -39,7 +39,7 @@ Variables are referred to as parameters. Environment parameters are always use a
 
 ## Useful Commands
 
-The following is a list of commands I have come across generally, and also by doing the Over The Wire Bandit game.
+The following is a list of commands I have come across generally, and also by doing the Over The Wire Bandit game. A cheatsheet fot these can be found [here]({{site.url}}/cheatsheets/cli_cheatsheet.pdf)
 
 `^c` to cancel running command.  
 `^d` to destroy running command.
@@ -76,4 +76,4 @@ localhost is 127.0.0.1
 
 ---
 
-I will hopefully make a cheat-sheet for the commands at some point (and update this this post when that happens). I learnt a lot from the workshop and Bandit, and will hopefully get the chance to do more of the Over The Wire exercises to learn more about bash!
+I learnt a lot from the workshop and Bandit, and will hopefully get the chance to do more of the Over The Wire exercises to learn more about bash!
