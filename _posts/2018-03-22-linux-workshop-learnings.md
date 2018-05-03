@@ -72,7 +72,7 @@ localhost is 127.0.0.1
 `cat` consumes input! You'll need to store input in a variable if you want to use the same input twice in a script.  
 `trap <command> <signal>` will run a command when a signal is received (e.g. cleanup on exit).
 `command -v <command> >/dev/null` can be used to check if a command exists (although care if running it without arguments will do something).  
-`while <statement>; do ... done` is a bash while loop, and `if [<statement>]; then ... elif [<statement>]; then ... else ... if` if an if statement.  
+`while <statement>; do ... done` is a bash while loop, and `if [<statement>]; then ... elif [<statement>]; then ... else ... fi` is an if statement.  
 
 ---
 
