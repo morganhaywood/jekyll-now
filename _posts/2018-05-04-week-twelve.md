@@ -11,6 +11,7 @@ tags:
   - networking
 ---
 
+This week has been once again filled with workshops and meetings. I did get some other work done though, and they were necessary in order to be able to start the group project next week (which I'm looking forward to :blush:).
 
 ## Goals
 
