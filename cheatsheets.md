@@ -4,4 +4,6 @@ title: Cheat Sheets
 permalink: /cheatsheets/
 ---
 
-[Git Commandline Interface]({{site.url}}/post-assets/git-commandline/git_cheat_sheet.pdf)
+[Commandline Interface]({{site.url}}/cheatsheets/cli_cheatsheet.pdf)
+
+[Git Commandline Interface]({{site.url}}/cheatsheets/git_cheat_sheet.pdf)
