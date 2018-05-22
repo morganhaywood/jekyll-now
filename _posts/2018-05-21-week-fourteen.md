@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week Thirteen in Review
+title: Week Fourteen in Review
 tags:
   - weekly review
   - meaningful project
@@ -10,7 +10,7 @@ This week was very short for me, since I was on leave Thursday and Friday. We di
 
 ## Goals
 
-#### Start writing some actual code for the project (even if it's just spikes).
+#### Start writing some actual code for the project (even if it's just spikes)
 
 We did only do spikes, but we have made good progress with proof-of-concept type things which we can show our customer (and thus get all-important feedback).
 
