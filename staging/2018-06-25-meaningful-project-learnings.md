@@ -9,7 +9,7 @@ tags:
   - language paradigms
 ---
 
-This has been a very educational project. While it's had its ups and downs, I learnt a lot from it and I'm glad I did it. I'm especially glad that we got something working and useable, and could hand it over to a team who will keep maintaining it. However the main point of the project was to learn. I don't think that this blog post **can** cover everything; a lot of what I've learnt has been less tangible or possible to put into words, or is of a fairly bland and factual nature (which can therefore be looked up in e.g. the Go language documentation). But here I'll reflect and document as much as can, and I feel is worth writing down.
+This has been a very educational project. While it's had its ups and downs, I learnt a lot from it and I'm glad I did it. I'm especially glad that we got something working and useable, and could hand it over to a team who will keep maintaining it. However the main point of the project was to learn. I don't think that this blog post **can** cover everything; a lot of what I've learnt has been less tangible or possible to put into words, or is of a fairly bland and factual nature (which can therefore be looked up in e.g. the Go language documentation). But here I'll reflect and document as much as I can, and I feel is worth writing down.
 
 ## Project Process
 
