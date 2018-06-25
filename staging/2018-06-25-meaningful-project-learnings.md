@@ -11,7 +11,7 @@ tags:
 
 This has been a very educational project. While it's had its ups and downs, I learnt a lot from it and I'm glad I did it. I'm especially glad that we got something working and useable, and could hand it over to a team who will keep maintaining it. However the main point of the project was to learn. I don't think that this blog post **can** cover everything; a lot of what I've learnt has been less tangible or possible to put into words, or is of a fairly bland and factual nature (which can therefore be looked up in e.g. the Go language documentation). But here I'll reflect and document as much as can, and I feel is worth writing down.
 
-#### Project process
+## Project Process
 
 I learnt a lot about the process of starting a new project. Going into this project I had very little idea about what documents needed to be produced in order to communicate with stakeholders and set expectations. The whole process ended up taking longer than it perhaps should have, but we got there in the end :joy: 
 
@@ -19,11 +19,11 @@ We produced three documents: a high-level overview of the current state (the pro
 
 I also learnt the importance of communicating with stakeholders and managing their expectations. The documents help with this, but you still need to make an effort to ensure that you are meeting their needs, and that they know what they are getting.
 
-#### Working in a team
+## Working in a Team
 
 I really enjoyed the team I was working with for this project, and we worked well together. I think that this was largely due to good communication. If there was a problem then we all felt that we could, and were willing to discuss it frankly at the first possible opportunity, rather than letting things get worse. And on the flip side, everyone was willing to listen to others' concerns without getting defensive, and work together to find a solution. This made for a much more functional team.
 
-#### Mobbing
+## Mobbing
 
 Once we started coding we spent a lot of time mobbing, either as trio or with others - experts who we pulled in to help, mentors, or other proteges who wanted to see what we were up to. None of us had much mobbing experience at the start, so it was a bit of learning curve. Our strong communication helped a lot with this though. One of the most beneficial things we did all project was to ask Mark to spend time with us mobbing though. We learnt a lot very quickly from him, and our mobbing drastically improved.
 
@@ -41,7 +41,7 @@ Some key points I've learnt from this:
 * Setting a timer for switching drivers is very important. However, sometime it's useful to ignore it in order to complete a logical piece of work (depending on the amount of extra time relative to the driving-turn time).  
 * Remember to commit regularly! Before switching drivers is a useful way to remember if the mob struggles with this.  
 
-#### Go
+## Go
 
 I found it very interesting to learn Go. I came to really like it as a language, although it has its quirks and annoyances (e.g. error handling :expressionless: ). It is **very** different to Java in paradigm though, so it took me a while to get used to it. I still don't think that I'm writing entirely idiomatic Go, but I'm definitely a lot closer than at the start of the project. Some short points:
 
@@ -56,7 +56,7 @@ I've also come to realise that what constitutes _clean code_ varies wildly betwe
 
 In the end, it's not really about one paradigm being better or worse, it's about choosing the right one for the job; they each have their strengths and weaknesses.
 
-#### Pipelines and deployment
+## Pipelines and Deployment
 
 I spent a lot of time trying to track down bugs in our pipeline, but as a result I learnt a lot about how it works. While I won't go into an explanation of our particular pipeline or deployment applications (although I do understand them a lot better now), I do have some general lessons:
 
@@ -66,7 +66,8 @@ I spent a lot of time trying to track down bugs in our pipeline, but as a result
 * Pay attention to which agents are doing what, and which permissions they need.  
 * Have a clear structure to your scripts, templates, etc. both internally and in how they're stored.  
 * Consider carefully where to put waits (i.e. which steps can run in parallel and which can't).  
-* Make sure your application has basic logging (even if it's just a welcome message) and can describe itself (even if it just logs a build number). This helps a lot with debugging if you don't know whether things are deploying correctly, or where your pipeline is breaking.
+* Make sure your application has basic logging (even if it's just a welcome message) and can describe itself (even if it just logs a build number). This helps a lot with debugging if you don't know whether things are deploying correctly, or where your pipeline is breaking.  
+* Docker is your friend, but choose the lightest-weight (base) image you can (`from scratch` if possible).
 
 ---
 
