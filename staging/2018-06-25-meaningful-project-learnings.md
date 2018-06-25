@@ -68,6 +68,6 @@ I spent a lot of time trying to track down bugs in our pipeline, but as a result
 * Consider carefully where to put waits (i.e. which steps can run in parallel and which can't).  
 * Make sure your application has basic logging (even if it's just a welcome message) and can describe itself (even if it just logs a build number). This helps a lot with debugging if you don't know whether things are deploying correctly, or where your pipeline is breaking.
 
---
+---
 
 Overall this has been a good experience. Having a good team helped a lot; I will miss working with them. I liked mobbing far more than I expected to, having been somewhat dubious about it to begin with. I found Go quite difficult at the start, but I came to quite like it. In retrospect that's not really surprising, since it's lightweight and script-like (somewhat similar to bash in concept if not concretely), and it borrows heavily from C which I really liked when I used it previously. And I'm definitely not surprised that I thoroughly enjoyed working on the pipeline :yum: It was frustrating, but I still liked it. Hopefully I can do more similar work in the future.
